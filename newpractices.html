@@ -76,7 +76,8 @@
 								<strong>Primitive Metrics</strong><br />
 									Primitive metrics or raw data are the best things to maintain in a historical database. They are often less biased. They can have many different uses and are typically used in many calculations for different measures. On the downside, primitive
 									metrics take up a lot of storage although data reduction techniques can help.
-									<br />
+							</p>
+							<p>
 								<strong>Calculated Metrics</strong><br />	
 									Calculated metrics are computed or calculated values that depend on data or other measures. 
 									Example:
@@ -88,23 +89,96 @@
 										</ul>	
 							</p>
 							<p>
+								<strong>What will TravelWare be measuring?</strong><br />
+								We at TravelWare will be measuring a number of different things through the software development process. We will be introducing 3 metrics to begin with. 
+									<ul>	
+										<li>Size - LOC</li>
+										<li>Complexity - McCabe's Cyclomatic Complexity Metric</li>
+										<li>Structure - LCOM</li>
+									</ul>	
+							</p>
+							<p>
 								<strong>What will TravelWare not be measuring?</strong><br />
 								The SQA department at TravelWare will be not measuring a few different areas of data. 
 								We will not be measuring the productivity or performance of each individual. If we were to do this, it would cause people to generate invalid numbers and it can 
 								easily penalise that most valuable contributors to each project. Instead, we will be putting the focus on the process. This will allow us to measure the product and
 								the information to help improve the process and it will help us measure people by their mature and effective use of a process to help improve overall results. 
 							</p>
+							
 						</div>
 						
 					</div>
-					<!--<div class="post">
-						<h2 class="title">Recommendations</h2>
+					<div class="post">
+						<h2 class="title">Lines Of Code </h2>
 						
 						<div class="entry">
+						<p>
+						Source lines of code (SLOC or LOC) is a software metric used to measure the size of a software program by counting the number of lines in the text of the program's source code. 
+						SLOC is typically used to predict the amount of effort that will be required to develop a program,
+						as well as to estimate programming productivity or effort once the software is produced.
+						</p>
+						<p>
+						There are two major types of SLOC measures: physical SLOC (LOC) and logical SLOC (LLOC). Specific definitions of these two measures vary, but the most common definition
+						of physical SLOC is a count of lines in the text of the program's source code including comment lines. Blank lines are also included unless the lines of code in a section 
+						consists of more than 25% blank lines. In this case blank lines in excess of 25% are not counted toward lines of code.
+						</p>
+						<p>				
+						Logical LOC attempts to measure the number of "statements", but their specific definitions are tied to specific computer languages 
+						(one simple logical LOC measure for C-like programming languages is the number of statement-terminating semicolons). It is much easier to create tools that measure physical SLOC,
+						and physical SLOC definitions are easier to explain. However, physical SLOC measures are sensitive to logically irrelevant formatting and style conventions, while logical LOC is less sensitive to formatting and style conventions. 
+						Unfortunately, SLOC measures are often stated without giving their definition, and logical LOC can often be significantly different from physical SLOC.
+						</p>
 							
 						</div>
 					
-					</div>-->
+					</div>
+					
+					<div class="post">
+						<h2 class="title">McCabe's Cyclomatic Complexity Metric</h2>
+						
+						<div class="entry">
+						<p>
+						A measure of the complexity of a program was developed by [McCabe 1976]. He developed a system which he called the cyclomatic complexity of a program. 
+						This system measures the number of independent paths in a program, thereby placing a numerical value on the complexity. 
+						In practice it is a count of the number of test conditions in a program.
+						</p>
+						<p>
+						The cyclomatic complexity (CC) of a graph (G) may be computed according to the following formula:<br />
+
+											<strong>CC(G) = Number (edges) - Number (nodes) + 1</strong>
+						</p>
+						<p>
+						The results of multiple experiments (G.A. Miller) suggest that modules approach zero defects when McCabe's Cyclomatic 
+						Complexity is within 7 ± 2. 
+						</p>
+						<p>
+						A study of PASCAL and FORTRAN programs (Lind and Vairavan 1989) found that a Cyclomatic Complexity between 10 and 15 
+						minimized the number of module changes.
+						</p>
+							
+						</div>
+					
+					</div>
+					
+					<div class="post">
+						<h2 class="title">Lack of Cohesion of Methods</h2>
+						
+						<div class="entry">
+						<p>
+							LCOM measures the degree of similarity of methods by instance variables. Any measure of separateness of methods helps
+							identify flaws in the design of the classes.
+							There are two different ways of measuring cohesion:
+							<ol>
+								<li>Calculate for each data field in a class what percentage of methods use that data field. Average percentages
+								then subtract from 100%. Lower percentages mean greater cohesion of data and methods in a class.</li>
+								<li>High cohesion indicates good class subdivision. Lack of cohesion or low cohesion increases complexity, thereby
+								increasing the likelihood of errors during the development process. The classes with low cohesion could probably be
+								subdivided into two or more subclasses with increased cohesion.</li>
+							</ol>
+						</p>	
+						</div>
+					
+					</div>
 				</div>
 				<!-- end content -->
 				<!-- start sidebar -->
